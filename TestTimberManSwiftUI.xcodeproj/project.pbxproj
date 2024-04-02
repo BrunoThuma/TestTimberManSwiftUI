@@ -11,6 +11,11 @@
 		5E62425A2BBC72A80085C632 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6242592BBC72A80085C632 /* ContentView.swift */; };
 		5E62425C2BBC72A90085C632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E62425B2BBC72A90085C632 /* Assets.xcassets */; };
 		5E62425F2BBC72A90085C632 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E62425E2BBC72A90085C632 /* Preview Assets.xcassets */; };
+		5E6242742BBC867B0085C632 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5E6242732BBC867B0085C632 /* GameScene.sks */; };
+		5E6242762BBC86840085C632 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6242752BBC86840085C632 /* PlayerNode.swift */; };
+		5E6242782BBC868A0085C632 /* LogPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6242772BBC868A0085C632 /* LogPiece.swift */; };
+		5E62427A2BBC868F0085C632 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6242792BBC868F0085C632 /* GameScene.swift */; };
+		5E62427C2BBC869A0085C632 /* assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5E62427B2BBC869A0085C632 /* assets.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		5E6242592BBC72A80085C632 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E62425B2BBC72A90085C632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E62425E2BBC72A90085C632 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5E6242732BBC867B0085C632 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = ../../TestTimberMan/TestTimberMan/GameScene.sks; sourceTree = "<group>"; };
+		5E6242752BBC86840085C632 /* PlayerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerNode.swift; path = ../../TestTimberMan/TestTimberMan/PlayerNode.swift; sourceTree = "<group>"; };
+		5E6242772BBC868A0085C632 /* LogPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogPiece.swift; path = ../../TestTimberMan/TestTimberMan/LogPiece.swift; sourceTree = "<group>"; };
+		5E6242792BBC868F0085C632 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = ../../TestTimberMan/TestTimberMan/GameScene.swift; sourceTree = "<group>"; };
+		5E62427B2BBC869A0085C632 /* assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = assets.atlas; path = ../../TestTimberMan/TestTimberMan/assets.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +61,14 @@
 		5E6242562BBC72A80085C632 /* TestTimberManSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				5E6242732BBC867B0085C632 /* GameScene.sks */,
+				5E6242792BBC868F0085C632 /* GameScene.swift */,
 				5E6242572BBC72A80085C632 /* TestTimberManSwiftUIApp.swift */,
 				5E6242592BBC72A80085C632 /* ContentView.swift */,
+				5E6242772BBC868A0085C632 /* LogPiece.swift */,
+				5E6242752BBC86840085C632 /* PlayerNode.swift */,
 				5E62425B2BBC72A90085C632 /* Assets.xcassets */,
+				5E62427B2BBC869A0085C632 /* assets.atlas */,
 				5E62425D2BBC72A90085C632 /* Preview Content */,
 			);
 			path = TestTimberManSwiftUI;
@@ -126,6 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E62425F2BBC72A90085C632 /* Preview Assets.xcassets in Resources */,
+				5E6242742BBC867B0085C632 /* GameScene.sks in Resources */,
+				5E62427C2BBC869A0085C632 /* assets.atlas in Resources */,
 				5E62425C2BBC72A90085C632 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E62427A2BBC868F0085C632 /* GameScene.swift in Sources */,
 				5E62425A2BBC72A80085C632 /* ContentView.swift in Sources */,
+				5E6242782BBC868A0085C632 /* LogPiece.swift in Sources */,
 				5E6242582BBC72A80085C632 /* TestTimberManSwiftUIApp.swift in Sources */,
+				5E6242762BBC86840085C632 /* PlayerNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
