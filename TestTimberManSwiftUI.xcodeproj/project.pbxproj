@@ -11,11 +11,15 @@
 		5E62425A2BBC72A80085C632 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6242592BBC72A80085C632 /* ContentView.swift */; };
 		5E62425C2BBC72A90085C632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E62425B2BBC72A90085C632 /* Assets.xcassets */; };
 		5E62425F2BBC72A90085C632 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E62425E2BBC72A90085C632 /* Preview Assets.xcassets */; };
-		5E6242742BBC867B0085C632 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5E6242732BBC867B0085C632 /* GameScene.sks */; };
 		5E6242762BBC86840085C632 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6242752BBC86840085C632 /* PlayerNode.swift */; };
-		5E6242782BBC868A0085C632 /* LogPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6242772BBC868A0085C632 /* LogPiece.swift */; };
-		5E62427A2BBC868F0085C632 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6242792BBC868F0085C632 /* GameScene.swift */; };
 		5E62427C2BBC869A0085C632 /* assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5E62427B2BBC869A0085C632 /* assets.atlas */; };
+		F78174982BBC9DFD001F8313 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F78174972BBC9DFD001F8313 /* GameScene.sks */; };
+		F781749A2BBC9E0B001F8313 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78174992BBC9E0B001F8313 /* GameScene.swift */; };
+		F781749C2BBC9E1A001F8313 /* LogPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = F781749B2BBC9E1A001F8313 /* LogPiece.swift */; };
+		F79314862BBCD436005B2B50 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = F79314852BBCD436005B2B50 /* GoogleMobileAds */; };
+		F793148B2BBCD4CD005B2B50 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79314872BBCD4CD005B2B50 /* BannerAdView.swift */; };
+		F793148C2BBCD4CD005B2B50 /* IntersticalAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79314882BBCD4CD005B2B50 /* IntersticalAdView.swift */; };
+		F793148D2BBCD4CD005B2B50 /* RewardedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79314892BBCD4CD005B2B50 /* RewardedAdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,11 +28,15 @@
 		5E6242592BBC72A80085C632 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E62425B2BBC72A90085C632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E62425E2BBC72A90085C632 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5E6242732BBC867B0085C632 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = ../../TestTimberMan/TestTimberMan/GameScene.sks; sourceTree = "<group>"; };
-		5E6242752BBC86840085C632 /* PlayerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerNode.swift; path = ../../TestTimberMan/TestTimberMan/PlayerNode.swift; sourceTree = "<group>"; };
-		5E6242772BBC868A0085C632 /* LogPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogPiece.swift; path = ../../TestTimberMan/TestTimberMan/LogPiece.swift; sourceTree = "<group>"; };
-		5E6242792BBC868F0085C632 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = ../../TestTimberMan/TestTimberMan/GameScene.swift; sourceTree = "<group>"; };
-		5E62427B2BBC869A0085C632 /* assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = assets.atlas; path = ../../TestTimberMan/TestTimberMan/assets.atlas; sourceTree = "<group>"; };
+		5E6242752BBC86840085C632 /* PlayerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerNode.swift; sourceTree = "<group>"; };
+		5E62427B2BBC869A0085C632 /* assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = assets.atlas; sourceTree = "<group>"; };
+		F78174972BBC9DFD001F8313 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F78174992BBC9E0B001F8313 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F781749B2BBC9E1A001F8313 /* LogPiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogPiece.swift; sourceTree = "<group>"; };
+		F79314872BBCD4CD005B2B50 /* BannerAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		F79314882BBCD4CD005B2B50 /* IntersticalAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntersticalAdView.swift; sourceTree = "<group>"; };
+		F79314892BBCD4CD005B2B50 /* RewardedAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAdView.swift; sourceTree = "<group>"; };
+		F793148E2BBCD5CE005B2B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F79314862BBCD436005B2B50 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,11 +70,13 @@
 		5E6242562BBC72A80085C632 /* TestTimberManSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				5E6242732BBC867B0085C632 /* GameScene.sks */,
-				5E6242792BBC868F0085C632 /* GameScene.swift */,
+				F793148E2BBCD5CE005B2B50 /* Info.plist */,
+				F793148A2BBCD4CD005B2B50 /* Ad */,
+				F78174972BBC9DFD001F8313 /* GameScene.sks */,
+				F78174992BBC9E0B001F8313 /* GameScene.swift */,
 				5E6242572BBC72A80085C632 /* TestTimberManSwiftUIApp.swift */,
 				5E6242592BBC72A80085C632 /* ContentView.swift */,
-				5E6242772BBC868A0085C632 /* LogPiece.swift */,
+				F781749B2BBC9E1A001F8313 /* LogPiece.swift */,
 				5E6242752BBC86840085C632 /* PlayerNode.swift */,
 				5E62425B2BBC72A90085C632 /* Assets.xcassets */,
 				5E62427B2BBC869A0085C632 /* assets.atlas */,
@@ -80,6 +91,16 @@
 				5E62425E2BBC72A90085C632 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F793148A2BBCD4CD005B2B50 /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				F79314872BBCD4CD005B2B50 /* BannerAdView.swift */,
+				F79314882BBCD4CD005B2B50 /* IntersticalAdView.swift */,
+				F79314892BBCD4CD005B2B50 /* RewardedAdView.swift */,
+			);
+			path = Ad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +119,9 @@
 			dependencies = (
 			);
 			name = TestTimberManSwiftUI;
+			packageProductDependencies = (
+				F79314852BBCD436005B2B50 /* GoogleMobileAds */,
+			);
 			productName = TestTimberManSwiftUI;
 			productReference = 5E6242542BBC72A80085C632 /* TestTimberManSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -126,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 5E62424B2BBC72A80085C632;
+			packageReferences = (
+				F79314842BBCD436005B2B50 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = 5E6242552BBC72A80085C632 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,7 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E62425F2BBC72A90085C632 /* Preview Assets.xcassets in Resources */,
-				5E6242742BBC867B0085C632 /* GameScene.sks in Resources */,
+				F78174982BBC9DFD001F8313 /* GameScene.sks in Resources */,
 				5E62427C2BBC869A0085C632 /* assets.atlas in Resources */,
 				5E62425C2BBC72A90085C632 /* Assets.xcassets in Resources */,
 			);
@@ -154,9 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E62427A2BBC868F0085C632 /* GameScene.swift in Sources */,
+				F781749A2BBC9E0B001F8313 /* GameScene.swift in Sources */,
 				5E62425A2BBC72A80085C632 /* ContentView.swift in Sources */,
-				5E6242782BBC868A0085C632 /* LogPiece.swift in Sources */,
+				F781749C2BBC9E1A001F8313 /* LogPiece.swift in Sources */,
+				F793148C2BBCD4CD005B2B50 /* IntersticalAdView.swift in Sources */,
+				F793148B2BBCD4CD005B2B50 /* BannerAdView.swift in Sources */,
+				F793148D2BBCD4CD005B2B50 /* RewardedAdView.swift in Sources */,
 				5E6242582BBC72A80085C632 /* TestTimberManSwiftUIApp.swift in Sources */,
 				5E6242762BBC86840085C632 /* PlayerNode.swift in Sources */,
 			);
@@ -292,9 +322,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TestTimberManSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = UY7S7HWX9K;
+				DEVELOPMENT_TEAM = R9V648Y475;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestTimberManSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -321,9 +352,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TestTimberManSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = UY7S7HWX9K;
+				DEVELOPMENT_TEAM = R9V648Y475;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestTimberManSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -364,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F79314842BBCD436005B2B50 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F79314852BBCD436005B2B50 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F79314842BBCD436005B2B50 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5E62424C2BBC72A80085C632 /* Project object */;
 }

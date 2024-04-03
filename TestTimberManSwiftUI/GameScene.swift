@@ -7,7 +7,7 @@
 
 import SpriteKit
 import GameplayKit
-
+import GoogleMobileAds
 
 enum Side: CaseIterable {
     case left, right, none
@@ -17,13 +17,12 @@ enum GameState {
     case ready, playing, gameOver
 }
 
-class GameScene: SKScene {
+class GameScene: SKScene, GADFullScreenContentDelegate {
     var logBasePiece: LogPiece!
     var playerNode: PlayerNode!
-    
-    let chopAction: SKAction = SKAction(named: "Chop")!
-    
+        
     var gameOverLabel: SKLabelNode!
+    var tryAgainLabel: SKLabelNode!
     
     var tree: [LogPiece] = []
     
@@ -31,6 +30,9 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+        
+        // identificador de teste
+        RewardedAd.shared.loadAd(withAdUnitId: "ca-app-pub-3940256099942544/5224354917")
         
         logBasePiece = (childNode(withName: "log") as! LogPiece)
         logBasePiece.connectBranches()
@@ -42,22 +44,31 @@ class GameScene: SKScene {
         gameOverLabel = (childNode(withName: "GameOverLabel") as! SKLabelNode)
         gameOverLabel.isHidden = true
         
+        tryAgainLabel = (childNode(withName: "TryAgainLabel") as! SKLabelNode)
+        tryAgainLabel.isHidden = true
+        
         addTreeLog(side: .none)
         addRandomLogs(total: 10)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first!
+        
+        let nodes = nodes(at: touch.location(in: self))
+        
+        for node in nodes {
+            if node.name == "TryAgainLabel" {
+                showRewardedAd()
+                return
+            }
+        }
+        
         if state == .gameOver {
-            state = .ready
-            gameOverLabel.isHidden = true
-            
             restartGame()
             return
         }
         
         if state == .ready { state = .playing }
-        
-        let touch = touches.first!
         
         let location = touch.location(in: self)
         
@@ -82,30 +93,42 @@ class GameScene: SKScene {
             
             addRandomLogs(total: 1)
         }
-        
-        
-        
-        
-        run(chopAction)
     }
     
     override func update(_ currentTime: TimeInterval) {
         moveLogsDown()
     }
     
+    private func showRewardedAd() {
+        if let ad = RewardedAd.shared.rewardedAd {
+            ad.fullScreenContentDelegate = self
+            ad.present(fromRootViewController: self.view?.window?.rootViewController) {
+                // Adiciona o seu bonus aqui
+            }
+        }
+    }
+    
+    func adDidDismissFullScreenContent(_ ad: any GADFullScreenPresentingAd) {
+        restartGame()
+    }
+    
     private func restartGame() {
+        state = .ready
+        gameOverLabel.isHidden = true
+        tryAgainLabel.isHidden = true
+        
         let skView = self.view as SKView?
 
-            /* Load Game scene */
-            guard let scene = GameScene(fileNamed: "GameScene") as GameScene? else {
-                return
-            }
+        /* Load Game scene */
+        guard let scene = GameScene(fileNamed: "GameScene") as GameScene? else {
+            return
+        }
 
-            /* Ensure correct aspect mode */
-            scene.scaleMode = .aspectFill
+        /* Ensure correct aspect mode */
+        scene.scaleMode = .aspectFill
 
-            /* Restart GameScene */
-            skView?.presentScene(scene)
+        /* Restart GameScene */
+        skView?.presentScene(scene)
     }
     
     private func gameOver() {
@@ -118,6 +141,7 @@ class GameScene: SKScene {
         playerNode.run(turnRedAction)
         
         gameOverLabel.isHidden = false
+        tryAgainLabel.isHidden = false
     }
     
     private func moveLogsDown() {
