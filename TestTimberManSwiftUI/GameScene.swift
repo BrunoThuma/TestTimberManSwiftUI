@@ -21,8 +21,6 @@ class GameScene: SKScene {
     var logBasePiece: LogPiece!
     var playerNode: PlayerNode!
     
-    let chopAction: SKAction = SKAction(named: "Chop")!
-    
     var gameOverLabel: SKLabelNode!
     
     var tree: [LogPiece] = []
@@ -82,11 +80,6 @@ class GameScene: SKScene {
             
             addRandomLogs(total: 1)
         }
-        
-        
-        
-        
-        run(chopAction)
     }
     
     override func update(_ currentTime: TimeInterval) {
