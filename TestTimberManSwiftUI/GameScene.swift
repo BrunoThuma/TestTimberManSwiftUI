@@ -27,12 +27,13 @@ class GameScene: SKScene, GADFullScreenContentDelegate {
     var tree: [LogPiece] = []
     
     var state: GameState = .ready
-    
+        
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
         // identificador de teste
         RewardedAd.shared.loadAd(withAdUnitId: "ca-app-pub-3940256099942544/5224354917")
+        InterstitialAd.shared.loadAd(withAdUnitId: "ca-app-pub-3940256099942544/8691691433")
         
         logBasePiece = (childNode(withName: "log") as! LogPiece)
         logBasePiece.connectBranches()
@@ -99,6 +100,13 @@ class GameScene: SKScene, GADFullScreenContentDelegate {
         moveLogsDown()
     }
     
+    private func showIntersticialAd() {
+        if let ad = InterstitialAd.shared.interstitialAd {
+            ad.fullScreenContentDelegate = self
+            ad.present(fromRootViewController: self.view?.window?.rootViewController)
+        }
+    }
+    
     private func showRewardedAd() {
         if let ad = RewardedAd.shared.rewardedAd {
             ad.fullScreenContentDelegate = self
@@ -109,6 +117,7 @@ class GameScene: SKScene, GADFullScreenContentDelegate {
     }
     
     func adDidDismissFullScreenContent(_ ad: any GADFullScreenPresentingAd) {
+        if ad is GADInterstitialAd { return }
         restartGame()
     }
     
@@ -132,6 +141,8 @@ class GameScene: SKScene, GADFullScreenContentDelegate {
     }
     
     private func gameOver() {
+        showIntersticialAd()
+        
         state = .gameOver
         
         let turnRedAction = SKAction.colorize(with: .red,
