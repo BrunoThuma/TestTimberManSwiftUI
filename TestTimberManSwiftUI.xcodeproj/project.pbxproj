@@ -18,6 +18,8 @@
 		5E62427C2BBC869A0085C632 /* assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 5E62427B2BBC869A0085C632 /* assets.atlas */; };
 		5E8DEC982BBD231000585FFF /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 5E8DEC972BBD231000585FFF /* GoogleMobileAds */; };
 		5E8DECA42BBD2C5A00585FFF /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8DECA32BBD2C5A00585FFF /* BannerAdView.swift */; };
+		5E8DECA62BBD2CF400585FFF /* IntersticialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8DECA52BBD2CF400585FFF /* IntersticialAdView.swift */; };
+		5E8DECA82BBD2D2D00585FFF /* RewardAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8DECA72BBD2D2D00585FFF /* RewardAdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		5E8DEC9F2BBD2A7B00585FFF /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		5E8DECA12BBD2A7F00585FFF /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		5E8DECA32BBD2C5A00585FFF /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		5E8DECA52BBD2CF400585FFF /* IntersticialAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersticialAdView.swift; sourceTree = "<group>"; };
+		5E8DECA72BBD2D2D00585FFF /* RewardAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardAdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				5E6242772BBC868A0085C632 /* LogPiece.swift */,
 				5E6242752BBC86840085C632 /* PlayerNode.swift */,
 				5E8DECA32BBD2C5A00585FFF /* BannerAdView.swift */,
+				5E8DECA52BBD2CF400585FFF /* IntersticialAdView.swift */,
+				5E8DECA72BBD2D2D00585FFF /* RewardAdView.swift */,
 				5E62425B2BBC72A90085C632 /* Assets.xcassets */,
 				5E62427B2BBC869A0085C632 /* assets.atlas */,
 				5E62425D2BBC72A90085C632 /* Preview Content */,
@@ -184,8 +190,10 @@
 			files = (
 				5E62427A2BBC868F0085C632 /* GameScene.swift in Sources */,
 				5E62425A2BBC72A80085C632 /* ContentView.swift in Sources */,
+				5E8DECA82BBD2D2D00585FFF /* RewardAdView.swift in Sources */,
 				5E6242782BBC868A0085C632 /* LogPiece.swift in Sources */,
 				5E8DECA42BBD2C5A00585FFF /* BannerAdView.swift in Sources */,
+				5E8DECA62BBD2CF400585FFF /* IntersticialAdView.swift in Sources */,
 				5E6242582BBC72A80085C632 /* TestTimberManSwiftUIApp.swift in Sources */,
 				5E6242762BBC86840085C632 /* PlayerNode.swift in Sources */,
 			);
