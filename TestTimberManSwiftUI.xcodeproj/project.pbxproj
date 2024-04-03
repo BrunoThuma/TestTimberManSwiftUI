@@ -81,9 +81,7 @@
 				5E6242592BBC72A80085C632 /* ContentView.swift */,
 				5E6242772BBC868A0085C632 /* LogPiece.swift */,
 				5E6242752BBC86840085C632 /* PlayerNode.swift */,
-				5E8DECA32BBD2C5A00585FFF /* BannerAdView.swift */,
-				5E8DECA52BBD2CF400585FFF /* IntersticialAdView.swift */,
-				5E8DECA72BBD2D2D00585FFF /* RewardAdView.swift */,
+				5E8DECAB2BBD43CA00585FFF /* AdsViews */,
 				5E62425B2BBC72A90085C632 /* Assets.xcassets */,
 				5E62427B2BBC869A0085C632 /* assets.atlas */,
 				5E62425D2BBC72A90085C632 /* Preview Content */,
@@ -107,6 +105,16 @@
 				5E8DEC9B2BBD29D000585FFF /* CoreAudioTypes.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E8DECAB2BBD43CA00585FFF /* AdsViews */ = {
+			isa = PBXGroup;
+			children = (
+				5E8DECA32BBD2C5A00585FFF /* BannerAdView.swift */,
+				5E8DECA52BBD2CF400585FFF /* IntersticialAdView.swift */,
+				5E8DECA72BBD2D2D00585FFF /* RewardAdView.swift */,
+			);
+			path = AdsViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
