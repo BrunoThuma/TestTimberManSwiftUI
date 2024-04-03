@@ -7,7 +7,7 @@
 
 import SpriteKit
 import GameplayKit
-
+import GoogleMobileAds
 
 enum Side: CaseIterable {
     case left, right, none
@@ -17,7 +17,7 @@ enum GameState {
     case ready, playing, gameOver
 }
 
-class GameScene: SKScene {
+class GameScene: SKScene, GADFullScreenContentDelegate {
     var logBasePiece: LogPiece!
     var playerNode: PlayerNode!
     
@@ -29,6 +29,13 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+        
+#if DEBUG
+        // Chave intersticial de teste
+        InterstitialAd.shared.loadAd(withAdUnitId: "ca-app-pub-3940256099942544/8691691433")
+#else
+        InterstitialAd.shared.loadAd(withAdUnitId: "Sua chave de intersticial")
+#endif
         
         logBasePiece = (childNode(withName: "log") as! LogPiece)
         logBasePiece.connectBranches()
@@ -86,6 +93,13 @@ class GameScene: SKScene {
         moveLogsDown()
     }
     
+    private func showIntersticialAd() {
+        if let ad = InterstitialAd.shared.interstitialAd {
+            ad.fullScreenContentDelegate = self
+            ad.present(fromRootViewController: self.view?.window?.rootViewController)
+        }
+    }
+    
     private func restartGame() {
         let skView = self.view as SKView?
 
@@ -104,6 +118,8 @@ class GameScene: SKScene {
     private func gameOver() {
         state = .gameOver
         
+        showIntersticialAd()
+        
         let turnRedAction = SKAction.colorize(with: .red,
                                               colorBlendFactor: 0.8,
                                               duration: 0.3)
@@ -111,6 +127,7 @@ class GameScene: SKScene {
         playerNode.run(turnRedAction)
         
         gameOverLabel.isHidden = false
+        // Carregar novo ad
     }
     
     private func moveLogsDown() {
