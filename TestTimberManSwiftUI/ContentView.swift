@@ -11,10 +11,10 @@ import GoogleMobileAds
 
 struct ContentView: View {
     #if DEBUG
-    let bannerAdId =  "ca-app-pub-3940256099942544/2435281174"
+    let bannerAdId = "ca-app-pub-3940256099942544/2435281174"
     let rewardAdId = "ca-app-pub-3940256099942544/5224354917"
     #else
-    let bannerAdId = "Seu id de banner"
+    let bannerAdId = "ca-app-pub-2446678848694050/6991728181" // Nao use meu id
     let rewardAdId = "Seu id de reward"
     #endif
     
@@ -60,9 +60,8 @@ struct ContentView: View {
             
         }
         .onAppear {
-            RewardedAd.shared.loadAd(withAdUnitId: "ca-app-pub-3940256099942544/5224354917")
+            RewardedAd.shared.loadAd(withAdUnitId: rewardAdId)
             print("Loading intersticial ad")
-            
         }
     }
 }

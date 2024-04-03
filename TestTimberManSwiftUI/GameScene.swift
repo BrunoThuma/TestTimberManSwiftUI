@@ -1,12 +1,13 @@
 //
-//  GameScene.swift
-//  TestTimberMan
+//  GameScene1.swift
+//  TestTimberManSwiftUI
 //
-//  Created by Bruno Thuma on 17/03/24.
+//  Created by Bruno Thuma on 03/04/24.
 //
 
 import SpriteKit
 import GameplayKit
+import GoogleMobileAds
 
 
 enum Side: CaseIterable {
@@ -17,11 +18,9 @@ enum GameState {
     case ready, playing, gameOver
 }
 
-class GameScene: SKScene {
+class GameScene: SKScene, GADFullScreenContentDelegate {
     var logBasePiece: LogPiece!
     var playerNode: PlayerNode!
-    
-    let chopAction: SKAction = SKAction(named: "Chop")!
     
     var gameOverLabel: SKLabelNode!
     
@@ -31,6 +30,13 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+        
+        #if DEBUG
+        // Chave intersticial de teste
+        InterstitialAd.shared.loadAd(withAdUnitId: "ca-app-pub-3940256099942544/8691691433")
+        #else
+        InterstitialAd.shared.loadAd(withAdUnitId: "Sua chave de intersticial")
+        #endif
         
         logBasePiece = (childNode(withName: "log") as! LogPiece)
         logBasePiece.connectBranches()
@@ -82,15 +88,17 @@ class GameScene: SKScene {
             
             addRandomLogs(total: 1)
         }
-        
-        
-        
-        
-        run(chopAction)
     }
     
     override func update(_ currentTime: TimeInterval) {
         moveLogsDown()
+    }
+    
+    private func showIntersticialAd() {
+        if let ad = InterstitialAd.shared.interstitialAd {
+            ad.fullScreenContentDelegate = self
+            ad.present(fromRootViewController: self.view?.window?.rootViewController)
+        }
     }
     
     private func restartGame() {
@@ -109,6 +117,8 @@ class GameScene: SKScene {
     }
     
     private func gameOver() {
+        showIntersticialAd()
+        
         state = .gameOver
         
         let turnRedAction = SKAction.colorize(with: .red,
